@@ -22,7 +22,7 @@
 	
 	<script type = 'text/javascript'>
 		// zoom settings
-		var mapMinZoom   = 0;
+		var mapMinZoom   = 2;
 		var mapMaxZoom   = 5;
 
 		// set the view to the center of the map [0, 0]
@@ -93,13 +93,26 @@
 			popupAnchor:  [0, -25]
 		}
 	});
+	
+			const observationIcon = L.Icon.extend({
+		options: {
+			iconSize:     [24, 24],
+			iconAnchor:   [24, 24],
+			popupAnchor:  [0, -25]
+		}
+	});
 
 
 
 	const blueFort = new fortIcon({iconUrl: 'icons/MapIconFortWarden.png'});
 	const greenFort = new fortIcon({iconUrl: 'icons/MapIconFortColonial.png'});
-	const blueHome = new fortIcon({iconUrl: 'icons/MapIconHomeBaseWarden.png'});
-	const greenHome = new fortIcon({iconUrl: 'icons/MapIconHomeBaseColonial.png'});
+	const whiteFort = new fortIcon({iconUrl: 'icons/MapIconFort.png'});
+	const blueHome = new homeIcon({iconUrl: 'icons/MapIconHomeBaseWarden.png'});
+	const greenHome = new homeIcon({iconUrl: 'icons/MapIconHomeBaseColonial.png'});
+	const whiteHome = new homeIcon({iconUrl: 'icons/MapIconHomeBaseNeutral.png'});
+	const blueTower = new observationIcon({iconUrl: 'icons/MapIconObservationTowerWarden.png'});
+	const greenTower = new observationIcon({iconUrl: 'icons/MapIconObservationTowerColonial.png'});
+	const whiteTower = new observationIcon({iconUrl: 'icons/MapIconObservationTower.png'});
 
 
 
@@ -108,6 +121,7 @@
 	const uwFort1 = L.marker([-26.076521, 22.851563], {icon: blueFort}).addTo(map);
 	const uwFort2 = L.marker([-27.098254, 31.376953], {icon: blueFort}).addTo(map);
 	const uwFort3 = L.marker([-26.234302, 38.803711], {icon: blueFort}).addTo(map);
+	const uwTower1 = L.marker([-27.839076, 40.78125], {icon: blueTower}).addTo(map);
 	const ubHomeBaseW = L.marker([-27.566721, 28.652344], {icon: blueHome}).addTo(map);
 
 	
