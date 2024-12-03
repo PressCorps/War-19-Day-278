@@ -78,23 +78,7 @@
 	
 	//icons
 	
-		const fortIcon = L.Icon.extend({
-		options: {
-			iconSize:     [24, 24],
-			iconAnchor:   [24, 24],
-			popupAnchor:  [0, -25]
-		}
-	});
-
-		const homeIcon = L.Icon.extend({
-		options: {
-			iconSize:     [24, 24],
-			iconAnchor:   [24, 24],
-			popupAnchor:  [0, -25]
-		}
-	});
-	
-			const observationIcon = L.Icon.extend({
+		const mapIcon = L.Icon.extend({
 		options: {
 			iconSize:     [24, 24],
 			iconAnchor:   [24, 24],
@@ -103,26 +87,35 @@
 	});
 
 
+		//forts
+	const blueFort = new mapIcon({iconUrl: 'icons/MapIconFortWarden.png'});
+	const greenFort = new mapIcon({iconUrl: 'icons/MapIconFortColonial.png'});
+	const whiteFort = new mapIcon({iconUrl: 'icons/MapIconFort.png'});
+		//home bases
+	const blueHome = new mapIcon({iconUrl: 'icons/MapIconHomeBaseWarden.png'});
+	const greenHome = new mapIcon({iconUrl: 'icons/MapIconHomeBaseColonial.png'});
+	const whiteHome = new mapIcon({iconUrl: 'icons/MapIconHomeBaseNeutral.png'});
+		//obervation towers
+	const blueTower = new mapIcon({iconUrl: 'icons/MapIconObservationTowerWarden.png'});
+	const greenTower = new mapIcon({iconUrl: 'icons/MapIconObservationTowerColonial.png'});
+	const whiteTower = new mapIcon({iconUrl: 'icons/MapIconObservationTower.png'});
+		//static base 1
+	const blueBase1 = new mapIcon({iconUrl: 'icons/MapIconStaticBase1Warden.png'});
+	const greenBase1 = new mapIcon({iconUrl: 'icons/MapIconStaticBase1Colonial.png'});
+	const whiteBase1 = new mapIcon({iconUrl: 'icons/MapIconStaticBase1.png'});
 
-	const blueFort = new fortIcon({iconUrl: 'icons/MapIconFortWarden.png'});
-	const greenFort = new fortIcon({iconUrl: 'icons/MapIconFortColonial.png'});
-	const whiteFort = new fortIcon({iconUrl: 'icons/MapIconFort.png'});
-	const blueHome = new homeIcon({iconUrl: 'icons/MapIconHomeBaseWarden.png'});
-	const greenHome = new homeIcon({iconUrl: 'icons/MapIconHomeBaseColonial.png'});
-	const whiteHome = new homeIcon({iconUrl: 'icons/MapIconHomeBaseNeutral.png'});
-	const blueTower = new observationIcon({iconUrl: 'icons/MapIconObservationTowerWarden.png'});
-	const greenTower = new observationIcon({iconUrl: 'icons/MapIconObservationTowerColonial.png'});
-	const whiteTower = new observationIcon({iconUrl: 'icons/MapIconObservationTower.png'});
 
 
 
 // markers
 		//umbral wildwood bottom right https://static.wixstatic.com/media/dbafb3_573486eebdb349359a48490662a62a93~mv2.jpg
-	const uwFort1 = L.marker([-26.076521, 22.851563], {icon: blueFort}).addTo(map);
-	const uwFort2 = L.marker([-27.098254, 31.376953], {icon: blueFort}).addTo(map);
-	const uwFort3 = L.marker([-26.234302, 38.803711], {icon: blueFort}).addTo(map);
-	const uwTower1 = L.marker([-27.839076, 40.78125], {icon: blueTower}).addTo(map);
-	const ubHomeBaseW = L.marker([-27.566721, 28.652344], {icon: blueHome}).addTo(map);
+	const uwFort1 = L.marker([-26.076521, 22.851563], {icon: blueFort}).addTo(map).bindPopup('Fort');
+	const uwFort2 = L.marker([-27.098254, 31.376953], {icon: blueFort}).addTo(map).bindPopup('Fort');
+	const uwFort3 = L.marker([-26.234302, 38.803711], {icon: blueFort}).addTo(map).bindPopup('Fort');
+	const uwTower1 = L.marker([-27.839076, 40.78125], {icon: blueTower}).addTo(map).bindPopup('Observation Tower');
+	const uwTower2 = L.marker([-30.183122, 36.5625], {icon: blueTower}).addTo(map).bindPopup('Observation Tower');
+	const uwHomeBaseW = L.marker([-27.566721, 28.652344], {icon: blueHome}).addTo(map).bindPopup('Home Base');
+	const uwStaticBase1 = L.marker([-28.033198, 38.979492], {icon: blueHome}).addTo(map).bindPopup('Static Base Level 1');
 
 	
 
