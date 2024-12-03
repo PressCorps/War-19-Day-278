@@ -61,6 +61,18 @@
 
 		// adds the mouse cursor position widget to the lower left corner of the map
 		L.control.mousePosition().addTo(map)
+		
+		
+		
+		//Coordinate Finder
+    var marker = L.marker([82.118384, -209.882813], {
+      draggable: true,
+    }).addTo(map);
+    marker.bindPopup('LatLng Marker').openPopup();
+    marker.on('dragend', function(e) {
+      marker.getPopup().setContent(marker.getLatLng().toString()).openOn(map);
+    });
+		
 	</script>
   </body>
 </html>
