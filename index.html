@@ -155,20 +155,13 @@
 	const hhStaticBase2 = L.marker([-32.472695, 1.494141], {icon: greenBase3}).addTo(map).bindPopup('Static Base Level 3');
 	const hhStaticBase3 = L.marker([-36.315125,  -4.306641], {icon: greenBase2}).addTo(map).bindPopup('Static Base Level 2');
 	const hhStaticBase4 = L.marker([-29.764377,  -9.931641], {icon: greenBase1}).addTo(map).bindPopup('Static Base Level 1');
+	const hhTower1 = L.marker([-27.059126, -1.845703], {icon: greenTower}).addTo(map).bindPopup('Observation Tower');
 
 	
 
 	
 	
-		//layer group
-	var markers = L.layerGroup([uwFort1, uwFort2]);
-	var regions	= L.layerGroup([uwName1]);
-	
-	
-	var layerControl = L.control.layers(regions, markers).addTo(map);
-	layerControl.addOverlay(regions, "Regions");
-	
-		
+
 	</script>
   </body>
 </html>
