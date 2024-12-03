@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<title>Unnamed Map</title>
+	<title>Foxhole War 19 Day 278</title>
 	<meta charset='utf-8'>
 	<meta name = 'viewport' content='initial-scale=1.0, user-scalable=no'>
 	<meta name = 'apple-mobile-web-app-capable' content='yes'>
@@ -72,6 +72,28 @@
     marker.on('dragend', function(e) {
       marker.getPopup().setContent(marker.getLatLng().toString()).openOn(map);
     });
+	
+	
+	
+	//icons
+	
+	var fortWarden = L.icon({
+    iconUrl: 'icons/MapIconFortWarden.png',
+    iconSize:     [38, 95], // size of the icon
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+	
+	//markers
+	
+	L.marker([-26.076521, 22.851563], {icon: greenIcon}).addTo(map);
+	
+});
+	
+	
+	
+	
+	
+	
 		
 	</script>
   </body>
