@@ -66,7 +66,7 @@
 		
 		
 		//Coordinate Finder
-    var marker = L.marker([82.118384, -209.882813], {
+    var marker = L.marker([55.776573, -121.992188], {
       draggable: true,
     }).addTo(map);
     marker.bindPopup('LatLng Marker').openPopup();
@@ -86,17 +86,28 @@
 		}
 	});
 
-	const blueIcon = new fortIcon({iconUrl: 'icons/MapIconFortWarden.png'});
-//	const redIcon = new LeafIcon({iconUrl: 'leaf-red.png'});
+		const homeIcon = L.Icon.extend({
+		options: {
+			iconSize:     [24, 24],
+			iconAnchor:   [24, 24],
+			popupAnchor:  [0, -25]
+		}
+	});
 
 
-	const mblue = L.marker([-26.076521, 22.851563], {icon: blueIcon}).bindPopup('I am a blue fort.').addTo(map);
-//	const mRed = L.marker([51.495, -0.083], {icon: redIcon}).bindPopup('I am a red leaf.').addTo(map);
-//	const mOrange = L.marker([51.49, -0.1], {icon: orangeIcon}).bindPopup('I am an orange leaf.').addTo(map);
-	
-	//markers
-	
-//	var markerWarden1 = L.marker([-26.076521, 22.851563], {icon: greenIcon}).addTo(map);
+
+	const blueFort = new fortIcon({iconUrl: 'icons/MapIconFortWarden.png'});
+	const greenFort = new fortIcon({iconUrl: 'icons/MapIconFortColonial.png'});
+	const blueHome = new fortIcon({iconUrl: 'icons/MapIconHomeBaseWarden.png'});
+	const greenHome = new fortIcon({iconUrl: 'icons/MapIconHomeBaseColonial.png'});
+
+
+
+// markers
+
+	const mblue = L.marker([-26.076521, 22.851563], {icon: blueFort}).addTo(map);
+	const mblue = L.marker([-27.566721, 28.652344], {icon: blueHome}).addTo(map);
+
 	
 
 	
