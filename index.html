@@ -66,7 +66,7 @@
 		
 		
 		//Coordinate Finder
-    var marker = L.marker([55.776573, -121.992188], {
+    var marker = L.marker([-26.74561, 44.296875], {
       draggable: true,
     }).addTo(map);
     marker.bindPopup('LatLng Marker').openPopup();
@@ -112,10 +112,12 @@
 	const uwFort1 = L.marker([-26.076521, 22.851563], {icon: blueFort}).addTo(map).bindPopup('Fort');
 	const uwFort2 = L.marker([-27.098254, 31.376953], {icon: blueFort}).addTo(map).bindPopup('Fort');
 	const uwFort3 = L.marker([-26.234302, 38.803711], {icon: blueFort}).addTo(map).bindPopup('Fort');
+	const uwFort4 = L.marker([-32.694866, 52.119141], {icon: whiteFort}).addTo(map).bindPopup('Fort');
 	const uwTower1 = L.marker([-27.839076, 40.78125], {icon: blueTower}).addTo(map).bindPopup('Observation Tower');
 	const uwTower2 = L.marker([-30.183122, 36.5625], {icon: blueTower}).addTo(map).bindPopup('Observation Tower');
 	const uwHomeBaseW = L.marker([-27.566721, 28.652344], {icon: blueHome}).addTo(map).bindPopup('Home Base');
-	const uwStaticBase1 = L.marker([-28.033198, 38.979492], {icon: blueHome}).addTo(map).bindPopup('Static Base Level 1');
+	const uwStaticBase1 = L.marker([-28.033198, 38.979492], {icon: blueBase1}).addTo(map).bindPopup('Static Base Level 1');
+	const uwStaticBase2 = L.marker([-30.826781, 49.306641], {icon: whiteBase1}).addTo(map).bindPopup('Static Base Level 1');
 
 	
 
