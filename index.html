@@ -76,6 +76,10 @@
 	
 	
 	
+	//layer group
+	var markers = L.layerGroup([]);
+	var regions	= L.layerGroup([]);
+	
 	//icons
 	
 		const mapIcon = L.Icon.extend({
@@ -86,7 +90,16 @@
 		}
 	});
 
+		const regionIcon = L.Icon.extend({
+		options: {
+			iconSize:     [24, 24],
+			iconAnchor:   [24, 24],
+			popupAnchor:  [-10, -50]
+		}
+	});
 
+		//RegionName
+	const uwName = new mapIcon({iconUrl: 'icons/region names/umbral wildwood.png'});
 		//forts
 	const blueFort = new mapIcon({iconUrl: 'icons/MapIconFortWarden.png'});
 	const greenFort = new mapIcon({iconUrl: 'icons/MapIconFortColonial.png'});
@@ -130,6 +143,7 @@
 	const uwStaticBase5 = L.marker([-38.959409, 31.816406], {icon: greenBase1}).addTo(map).bindPopup('Static Base Level 1');
 	const uwStaticBase6 = L.marker([-40.580585, 25.839844], {icon: blueBase1}).addTo(map).bindPopup('Static Base Level 1');
 	const uwStaticBase7 = L.marker([-34.994004, 38.583984], {icon: greenBase2}).addTo(map).bindPopup('Static Base Level 2');
+	const uwName1 = L.marker([-32.990236, 32.871094], {icon: uwName}).addTo(map);
 
 	
 
